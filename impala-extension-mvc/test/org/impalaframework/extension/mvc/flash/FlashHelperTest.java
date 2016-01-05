@@ -43,7 +43,6 @@ public class FlashHelperTest extends TestCase {
         session = createMock(HttpSession.class);
     }
     
-    @SuppressWarnings("unchecked")
     public void testSetFlashState() throws Exception {
         
         HashMap<String, String> flashMap = new HashMap<String, String>();
@@ -133,7 +132,6 @@ public class FlashHelperTest extends TestCase {
         verify(request, session);
     }
     
-    @SuppressWarnings("unchecked")
     public void testMergeFlashState() throws Exception {
         final ModelMap modelMap = new ModelMap();
         modelMap.put("one", "existingOne");

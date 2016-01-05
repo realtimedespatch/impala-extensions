@@ -41,7 +41,6 @@ public class DefaultEventListenerRegistry implements EventListenerRegistry {
         eventListeners.put(eventType, new CopyOnWriteArrayList<EventListener>(list));
     }
 
-    @SuppressWarnings("unchecked")
     private void sort(List<EventListener> list) {
         Collections.sort(list, new OrderComparator());
     }

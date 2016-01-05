@@ -38,7 +38,8 @@ public abstract class RequestModelHelper {
     /**
      * Adds to model all parameters in request which are not in the model
      */
-    public static void setParameters(HttpServletRequest request,
+    @SuppressWarnings("rawtypes")
+	public static void setParameters(HttpServletRequest request,
             final Map modelMap) {
         
         Enumeration<String> parameterNames = request.getParameterNames();

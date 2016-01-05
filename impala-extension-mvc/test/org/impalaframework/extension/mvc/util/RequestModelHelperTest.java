@@ -34,10 +34,9 @@ import org.springframework.web.servlet.view.RedirectView;
 
 public class RequestModelHelperTest extends TestCase {
 
-    @SuppressWarnings("unchecked")
     public void testSetParameters() {
         HttpServletRequest request = createMock(HttpServletRequest.class);
-        HashMap model = new HashMap();
+        HashMap<String,Object> model = new HashMap<String,Object>();
         model.put("p2", "2a");
         model.put("p3", null);
         

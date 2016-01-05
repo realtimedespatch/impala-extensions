@@ -74,7 +74,6 @@ public class JdbcTemplate extends org.springframework.jdbc.core.JdbcTemplate {
      * @return a list of maps as in {@link #queryForList(String, Object[])}
      * @throws DataAccessException
      */
-    @SuppressWarnings("unchecked")
     public List<Map<String, Object>> queryForList(String sql,
             Map<String, Object> parameters, boolean resultKeysAsLowerCase)
             throws DataAccessException {

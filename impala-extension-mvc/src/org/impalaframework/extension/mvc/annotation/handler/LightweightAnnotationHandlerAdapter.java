@@ -86,7 +86,6 @@ public class LightweightAnnotationHandlerAdapter implements HandlerAdapter, Init
         return false;
     }
     
-    @SuppressWarnings("unchecked")
     protected ModelAndView invokeHandlerMethod(
             HttpServletRequest request,
             HttpServletResponse response, 

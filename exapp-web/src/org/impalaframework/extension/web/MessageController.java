@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @org.springframework.stereotype.Controller
 @LightweightAdaptable
-@SuppressWarnings("unchecked")
+@SuppressWarnings({"unchecked","rawtypes"})
 public class MessageController {
     
     private MessageService messageService;

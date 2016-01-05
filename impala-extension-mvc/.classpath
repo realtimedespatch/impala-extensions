@@ -15,7 +15,7 @@
 	<classpathentry kind="lib" path="/repository/main/spring-context-support-4.2.4.RELEASE.jar"/>
 	<classpathentry kind="lib" path="/repository/main/spring-core-4.2.4.RELEASE.jar"/>
 	<classpathentry kind="lib" path="/repository/main/spring-expression-4.2.4.RELEASE.jar"/>
-	<classpathentry kind="lib" path="/repository/main/spring-web-4.2.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/repository/main/spring-web-4.2.4.RELEASE.jar" sourcepath="/repository/main/spring-web-4.2.4.RELEASE-sources.jar"/>
 	<classpathentry kind="lib" path="/repository/web/spring-webmvc-4.2.4.RELEASE.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -81,9 +81,10 @@ public class FlashHelper {
             request.removeAttribute("flashState");
         }
     }
-
+    
+    @SuppressWarnings("rawtypes") 
     void setFlashState(HttpServletRequest request,
-            Map modelMap) {
+           Map modelMap) {
         
         final Set keys = modelMap.keySet();
         Map<String,Object> flashState = null;

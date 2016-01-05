@@ -58,7 +58,6 @@ public class ServletHandlerMethodInvoker {
         return typeConverter;
     }
 
-    @SuppressWarnings("unchecked")
     public void invokeModelAttributeMethod(
             Method attributeMethod,
             Object handler,

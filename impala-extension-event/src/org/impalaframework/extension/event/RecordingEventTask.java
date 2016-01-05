@@ -64,7 +64,7 @@ public class RecordingEventTask extends EventTask {
 
     void doStatusRecording(final String eventId, final String consumer, final Throwable error) {
         try {
-            new TransactionTemplate(transactionManager).execute(new TransactionCallback() {
+            new TransactionTemplate(transactionManager).execute(new TransactionCallback<Object>() {
 
                 public Object doInTransaction(TransactionStatus status) {
                     if (error != null) {
