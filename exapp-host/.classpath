@@ -3,8 +3,6 @@
 	<classpathentry kind="src" path="test"/>
 	<classpathentry kind="src" path="resources"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry exported="true" kind="lib" path="/repository/compile/impala-web-1.0.2.jar" sourcepath="/repository/compile/impala-web-1.0.2-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="/repository/web/spring-webmvc-2.5.6.jar" sourcepath="/repository/main/spring-webmvc-2.5.6-sources.jar"/>
 	<classpathentry exported="true" kind="lib" path="/repository/jetty/jasper-compiler-5.5.15.jar"/>
 	<classpathentry exported="true" kind="lib" path="/repository/jetty/jasper-compiler-jdt-5.5.15.jar"/>
 	<classpathentry exported="true" kind="lib" path="/repository/jetty/jasper-runtime-5.5.15.jar"/>
@@ -14,11 +12,12 @@
 	<classpathentry exported="true" kind="lib" path="/repository/jetty/xercesImpl-2.8.1.jar" sourcepath="/repository/main/xercesImpl-2.8.1-sources.jar"/>
 	<classpathentry exported="true" kind="lib" path="/repository/web/jsp-api-2.1.jar"/>
 	<classpathentry exported="true" kind="lib" path="/repository/web/servlet-api-2.5.jar"/>
-	<classpathentry exported="true" kind="lib" path="/repository/compile/impala-build-1.0.2.jar"/>
-	<classpathentry exported="true" kind="lib" path="/repository/compile/impala-command-1.0.2.jar"/>
-	<classpathentry exported="true" kind="lib" path="/repository/compile/impala-core-1.0.2.jar" sourcepath="/repository/compile/impala-core-1.0.2-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="/repository/compile/impala-interactive-1.0.2.jar"/>
-	<classpathentry exported="true" kind="lib" path="/repository/compile/impala-jmx-1.0.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="/repository/compile/impala-build-1.1-SNAPSHOT.jar" sourcepath="/repository/compile/impala-build-1.1-SNAPSHOT-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="/repository/compile/impala-command-1.1-SNAPSHOT.jar" sourcepath="/repository/compile/impala-command-1.1-SNAPSHOT-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="/repository/compile/impala-core-1.1-SNAPSHOT.jar" sourcepath="/repository/compile/impala-core-1.1-SNAPSHOT-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="/repository/compile/impala-web-1.1-SNAPSHOT.jar" sourcepath="/repository/compile/impala-web-1.1-SNAPSHOT-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="/repository/compile/impala-interactive-1.1-SNAPSHOT.jar" sourcepath="/repository/compile/impala-interactive-1.1-SNAPSHOT-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="/repository/compile/impala-jmx-1.1-SNAPSHOT.jar" sourcepath="/repository/compile/impala-jmx-1.1-SNAPSHOT-sources.jar"/>
 	<classpathentry exported="true" kind="lib" path="/repository/compile/launcher.jar"/>
 	<classpathentry exported="true" kind="lib" path="/repository/compile/startjetty.jar"/>
 	<classpathentry exported="true" kind="lib" path="/repository/test/easymock-2.2.jar" sourcepath="/repository/test/easymock-2.2-sources.jar"/>
@@ -29,10 +28,21 @@
 	<classpathentry exported="true" kind="lib" path="/repository/main/joda-time-1.5.2.jar"/>
 	<classpathentry exported="true" kind="lib" path="/repository/main/launcher.jar"/>
 	<classpathentry exported="true" kind="lib" path="/repository/main/log4j-1.2.13.jar"/>
-	<classpathentry exported="true" kind="lib" path="/repository/main/spring-2.5.6.jar" sourcepath="/repository/main/spring-2.5.6-sources.jar"/>
 	<classpathentry exported="true" kind="lib" path="/repository/main/startjetty.jar"/>
 	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/impala-extension-dataaccess"/>
 	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/impala-extension-event"/>
 	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/impala-extension-mvc"/>
+	<classpathentry exported="true" kind="lib" path="/repository/main/spring-aop-3.2.0.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="/repository/main/spring-beans-3.2.0.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="/repository/main/spring-context-3.2.0.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="/repository/main/spring-context-support-3.2.0.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="/repository/main/spring-core-3.2.0.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="/repository/main/spring-expression-3.2.0.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="/repository/main/spring-jdbc-3.2.0.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="/repository/main/spring-orm-3.2.0.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="/repository/main/spring-tx-3.2.0.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="/repository/main/spring-web-3.2.0.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="/repository/main/aopalliance-1.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="/repository/web/spring-webmvc-3.2.0.RELEASE.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
