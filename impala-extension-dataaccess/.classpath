@@ -5,14 +5,14 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="/repository/main/commons-logging-1.1.jar" sourcepath="/repository/test/commons-logging-1.1-sources.jar"/>
 	<classpathentry kind="lib" path="/repository/test/junit-3.8.1.jar" sourcepath="/repository/test/junit-3.8.1-sources.jar"/>
-	<classpathentry kind="lib" path="/repository/main/spring-core-3.2.0.RELEASE.jar"/>
-	<classpathentry kind="lib" path="/repository/main/spring-jdbc-3.2.0.RELEASE.jar" sourcepath="/repository/main/spring-jdbc-3.2.0.RELEASE-sources.jar"/>
-	<classpathentry kind="lib" path="/repository/main/spring-tx-3.2.0.RELEASE.jar"/>
-	<classpathentry kind="lib" path="/repository/main/spring-aop-3.2.0.RELEASE.jar"/>
-	<classpathentry kind="lib" path="/repository/main/spring-beans-3.2.0.RELEASE.jar"/>
-	<classpathentry kind="lib" path="/repository/main/spring-context-3.2.0.RELEASE.jar"/>
-	<classpathentry kind="lib" path="/repository/main/spring-context-support-3.2.0.RELEASE.jar"/>
-	<classpathentry kind="lib" path="/repository/main/spring-expression-3.2.0.RELEASE.jar"/>
-	<classpathentry kind="lib" path="/repository/main/spring-web-3.2.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/repository/main/spring-core-4.2.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/repository/main/spring-jdbc-4.2.4.RELEASE.jar" sourcepath="/repository/main/spring-jdbc-4.2.4.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="/repository/main/spring-tx-4.2.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/repository/main/spring-aop-4.2.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/repository/main/spring-beans-4.2.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/repository/main/spring-context-4.2.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/repository/main/spring-context-support-4.2.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/repository/main/spring-expression-4.2.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/repository/main/spring-web-4.2.4.RELEASE.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

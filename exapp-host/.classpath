@@ -32,17 +32,17 @@
 	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/impala-extension-dataaccess"/>
 	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/impala-extension-event"/>
 	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/impala-extension-mvc"/>
-	<classpathentry exported="true" kind="lib" path="/repository/main/spring-aop-3.2.0.RELEASE.jar"/>
-	<classpathentry exported="true" kind="lib" path="/repository/main/spring-beans-3.2.0.RELEASE.jar"/>
-	<classpathentry exported="true" kind="lib" path="/repository/main/spring-context-3.2.0.RELEASE.jar"/>
-	<classpathentry exported="true" kind="lib" path="/repository/main/spring-context-support-3.2.0.RELEASE.jar"/>
-	<classpathentry exported="true" kind="lib" path="/repository/main/spring-core-3.2.0.RELEASE.jar"/>
-	<classpathentry exported="true" kind="lib" path="/repository/main/spring-expression-3.2.0.RELEASE.jar"/>
-	<classpathentry exported="true" kind="lib" path="/repository/main/spring-jdbc-3.2.0.RELEASE.jar"/>
-	<classpathentry exported="true" kind="lib" path="/repository/main/spring-orm-3.2.0.RELEASE.jar"/>
-	<classpathentry exported="true" kind="lib" path="/repository/main/spring-tx-3.2.0.RELEASE.jar"/>
-	<classpathentry exported="true" kind="lib" path="/repository/main/spring-web-3.2.0.RELEASE.jar"/>
-	<classpathentry exported="true" kind="lib" path="/repository/main/aopalliance-1.0.jar"/>
-	<classpathentry exported="true" kind="lib" path="/repository/web/spring-webmvc-3.2.0.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="/repository/main/spring-aop-4.2.4.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="/repository/main/spring-beans-4.2.4.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="/repository/main/spring-context-4.2.4.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="/repository/main/spring-context-support-4.2.4.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="/repository/main/spring-core-4.2.4.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="/repository/main/spring-expression-4.2.4.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="/repository/main/spring-jdbc-4.2.4.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="/repository/main/spring-orm-4.2.4.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="/repository/main/spring-tx-4.2.4.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="/repository/main/spring-web-4.2.4.RELEASE.jar"/>
+	<classpathentry exported="true" kind="lib" path="/repository/web/spring-webmvc-4.2.4.RELEASE.jar" sourcepath="/repository/web/spring-webmvc-4.2.4.RELEASE-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="/repository/compile/aopalliance-1.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

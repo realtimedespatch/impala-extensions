@@ -9,11 +9,11 @@
 	<classpathentry kind="lib" path="/repository/test/easymock-2.2.jar" sourcepath="/repository/test/easymock-2.2-sources.jar"/>
 	<classpathentry kind="lib" path="/repository/test/junit-3.8.1.jar" sourcepath="/repository/test/junit-3.8.1-sources.jar"/>
 	<classpathentry kind="lib" path="/repository/compile/impala-core-1.1-SNAPSHOT.jar" sourcepath="/repository/compile/impala-core-1.1-SNAPSHOT-sources.jar"/>
-	<classpathentry kind="lib" path="/repository/main/spring-context-3.2.0.RELEASE.jar"/>
-	<classpathentry kind="lib" path="/repository/main/spring-context-support-3.2.0.RELEASE.jar"/>
-	<classpathentry kind="lib" path="/repository/main/spring-core-3.2.0.RELEASE.jar"/>
-	<classpathentry kind="lib" path="/repository/main/spring-aop-3.2.0.RELEASE.jar"/>
-	<classpathentry kind="lib" path="/repository/main/spring-beans-3.2.0.RELEASE.jar"/>
-	<classpathentry kind="lib" path="/repository/main/spring-tx-3.2.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/repository/main/spring-context-4.2.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/repository/main/spring-context-support-4.2.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/repository/main/spring-core-4.2.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/repository/main/spring-aop-4.2.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/repository/main/spring-beans-4.2.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/repository/main/spring-tx-4.2.4.RELEASE.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
