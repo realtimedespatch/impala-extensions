@@ -11,3 +11,5 @@ impala-extension-dataaccess/bin/
 impala-extension-event/bin/
 impala-extension-hazelcast/.gitignore
 impala-extension-mvc/bin/
+deploy
+repository/dist
