@@ -14,6 +14,8 @@
 
 package org.impalaframework.extension.mvc.annotation.resolver;
 
+import java.lang.annotation.Annotation;
+
 import org.impalaframework.extension.mvc.annotation.SessionAttribute;
 import org.springframework.web.bind.support.WebArgumentResolver;
 import org.springframework.web.context.request.NativeWebRequest;
@@ -28,7 +30,7 @@ import org.springframework.web.context.request.WebRequest;
  */
 public class SessionAttributeArgumentResolver extends BaseAttributeArgumentResolver {
 
-    protected String getAttribute(Object paramAnn) {
+    protected String getAttribute(Annotation paramAnn) {
         String sessionAttribute = null;
         if (SessionAttribute.class.isInstance(paramAnn)) {
             SessionAttribute attribute = (SessionAttribute) paramAnn;

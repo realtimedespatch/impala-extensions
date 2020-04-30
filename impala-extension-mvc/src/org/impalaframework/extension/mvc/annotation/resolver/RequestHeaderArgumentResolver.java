@@ -14,6 +14,8 @@
 
 package org.impalaframework.extension.mvc.annotation.resolver;
 
+import java.lang.annotation.Annotation;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.impalaframework.extension.mvc.annotation.RequestHeader;
@@ -29,7 +31,7 @@ import org.springframework.web.context.request.NativeWebRequest;
  */
 public class RequestHeaderArgumentResolver extends BaseAttributeArgumentResolver {
 
-    protected String getAttribute(Object paramAnn) {
+    protected String getAttribute(Annotation paramAnn) {
         String attributeName = null;
         if (RequestHeader.class.isInstance(paramAnn)) {
             RequestHeader attribute = (RequestHeader) paramAnn;

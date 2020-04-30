@@ -14,6 +14,8 @@
 
 package org.impalaframework.extension.mvc.annotation.resolver;
 
+import java.lang.annotation.Annotation;
+
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 
@@ -29,7 +31,7 @@ import org.springframework.web.context.request.NativeWebRequest;
  */
 public class CookieValueArgumentResolver extends BaseAttributeArgumentResolver {
 
-    protected String getAttribute(Object paramAnn) {
+    protected String getAttribute(Annotation paramAnn) {
         String attributeName = null;
         if (CookieValue.class.isInstance(paramAnn)) {
             CookieValue attribute = (CookieValue) paramAnn;

@@ -14,6 +14,7 @@
 
 package org.impalaframework.extension.mvc.annotation.resolver;
 
+import java.lang.annotation.Annotation;
 import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Map;
@@ -34,7 +35,7 @@ import org.springframework.web.context.request.NativeWebRequest;
  */
 public class RequestParameterMapArgumentResolver extends BaseAttributeArgumentResolver {
 
-    protected String getAttribute(Object paramAnn) {
+    protected String getAttribute(Annotation paramAnn) {
         if (RequestParameterMap.class.isInstance(paramAnn)) {
             return "found";
         }

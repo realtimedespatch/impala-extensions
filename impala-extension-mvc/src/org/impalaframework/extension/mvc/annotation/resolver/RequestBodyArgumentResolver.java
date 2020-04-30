@@ -16,6 +16,7 @@ package org.impalaframework.extension.mvc.annotation.resolver;
 
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.lang.annotation.Annotation;
 
 import javax.servlet.ServletInputStream;
 import javax.servlet.http.HttpServletRequest;
@@ -34,7 +35,7 @@ import org.springframework.web.context.request.NativeWebRequest;
  */
 public class RequestBodyArgumentResolver extends BaseAttributeArgumentResolver {
 
-    protected String getAttribute(Object paramAnn) {
+    protected String getAttribute(Annotation paramAnn) {
         if (RequestBody.class.isInstance(paramAnn)) {
             RequestBody attribute = (RequestBody) paramAnn;
             return attribute.value();

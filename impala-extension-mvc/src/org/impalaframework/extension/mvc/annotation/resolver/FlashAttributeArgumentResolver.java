@@ -14,6 +14,8 @@
 
 package org.impalaframework.extension.mvc.annotation.resolver;
 
+import java.lang.annotation.Annotation;
+
 import org.impalaframework.extension.mvc.annotation.FlashAttribute;
 import org.impalaframework.extension.mvc.annotation.WebAnnotationUtils;
 import org.springframework.web.bind.support.WebArgumentResolver;
@@ -30,7 +32,7 @@ import org.springframework.web.context.request.WebRequest;
  */
 public class FlashAttributeArgumentResolver extends BaseAttributeArgumentResolver {
 
-    protected String getAttribute(Object paramAnn) {
+    protected String getAttribute(Annotation paramAnn) {
         String sessionAttribute = null;
         if (FlashAttribute.class.isInstance(paramAnn)) {
             FlashAttribute attribute = (FlashAttribute) paramAnn;

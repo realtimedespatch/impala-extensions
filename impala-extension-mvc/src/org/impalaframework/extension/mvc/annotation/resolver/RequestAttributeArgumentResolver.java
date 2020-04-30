@@ -14,6 +14,8 @@
 
 package org.impalaframework.extension.mvc.annotation.resolver;
 
+import java.lang.annotation.Annotation;
+
 import org.impalaframework.extension.mvc.annotation.RequestAttribute;
 import org.springframework.web.bind.support.WebArgumentResolver;
 import org.springframework.web.context.request.NativeWebRequest;
@@ -28,7 +30,7 @@ import org.springframework.web.context.request.WebRequest;
  */
 public class RequestAttributeArgumentResolver extends BaseAttributeArgumentResolver {
 
-    protected String getAttribute(Object paramAnn) {
+    protected String getAttribute(Annotation paramAnn) {
         String attributeName = null;
         if (RequestAttribute.class.isInstance(paramAnn)) {
             RequestAttribute attribute = (RequestAttribute) paramAnn;
