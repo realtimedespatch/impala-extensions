@@ -19,13 +19,29 @@ import java.lang.annotation.Annotation;
 import org.impalaframework.extension.mvc.annotation.WebAnnotationUtils;
 import org.springframework.core.MethodParameter;
 import org.springframework.web.bind.support.WebArgumentResolver;
+import org.springframework.web.bind.support.WebDataBinderFactory;
 import org.springframework.web.context.request.NativeWebRequest;
+import org.springframework.web.method.support.HandlerMethodArgumentResolver;
+import org.springframework.web.method.support.ModelAndViewContainer;
 
 /**
  * Implements template method for attribute argument resolver implementations
  * @author Phil Zoio
  */
-public abstract class BaseAttributeArgumentResolver implements WebArgumentResolver {
+public abstract class BaseAttributeArgumentResolver implements WebArgumentResolver, HandlerMethodArgumentResolver {
+	
+	@Override
+	public boolean supportsParameter(MethodParameter parameter) {
+		return true;
+	}
+	
+	@Override
+	public Object resolveArgument(MethodParameter methodParameter, 
+			ModelAndViewContainer mavContainer,
+			NativeWebRequest webRequest, 
+			WebDataBinderFactory binderFactory) throws Exception {
+		return resolveArgument(methodParameter, webRequest);
+	}
     
     public Object resolveArgument(MethodParameter methodParameter,
             NativeWebRequest webRequest) throws Exception {
