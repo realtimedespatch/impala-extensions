@@ -1,10 +1,18 @@
-web from org.springframework:spring-webmvc:2.5.6
-web from javax.servlet:servlet-api:2.5
+web from org.springframework:spring-webmvc:4.3.26.RELEASE
+web from javax.servlet:servlet-api:3.1.0
+jetty from org.eclipse.jetty:jetty-http:9.4.14.v20181114
+jetty from org.eclipse.jetty:jetty-io:9.4.14.v20181114
+jetty from org.eclipse.jetty:jetty-security:9.4.14.v20181114
+jetty from org.eclipse.jetty:jetty-server:9.4.14.v20181114
+jetty from org.eclipse.jetty:jetty-servlet:9.4.14.v20181114
+jetty from org.eclipse.jetty:jetty-util:9.4.14.v20181114
+jetty from org.eclipse.jetty:jetty-webapp:9.4.14.v20181114
+jetty from org.eclipse.jetty:jetty-xml:9.4.14.v20181114
+
 web from javax.servlet.jsp:jsp-api:2.1  
-jetty from org.mortbay.jetty:jetty:6.1.1
-jetty from org.mortbay.jetty:jetty-util:6.1.1
 jetty from tomcat:jasper-runtime:5.5.15 source="false"
 jetty from tomcat:jasper-compiler:5.5.15 source="false"
 jetty from tomcat:jasper-compiler-jdt:5.5.15 source="false"
+
 jetty from xerces:xercesImpl:2.8.1
 jetty from commons-el:commons-el:1.0
