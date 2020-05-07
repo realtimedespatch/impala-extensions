@@ -30,6 +30,11 @@ import org.springframework.web.context.request.NativeWebRequest;
  * @author Phil Zoio
  */
 public class CookieValueArgumentResolver extends BaseAttributeArgumentResolver {
+	
+	@Override
+	protected boolean isSupportedAnnotation(Annotation annotation) {
+		return (CookieValue.class.isInstance(annotation));
+	}
 
     protected String getAttribute(Annotation paramAnn) {
         String attributeName = null;
@@ -40,7 +45,7 @@ public class CookieValueArgumentResolver extends BaseAttributeArgumentResolver {
         return attributeName;
     }
 
-    protected Object getValue(NativeWebRequest webRequest, String attributeName) {
+    protected Object getValue(NativeWebRequest webRequest, String attributeName, Annotation annotation) {
         HttpServletRequest request = ObjectUtils.cast(webRequest.getNativeRequest(), HttpServletRequest.class);
         final Cookie[] cookies = request.getCookies();
         if (cookies == null) {

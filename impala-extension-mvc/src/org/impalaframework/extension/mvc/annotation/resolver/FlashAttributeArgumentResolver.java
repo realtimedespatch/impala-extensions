@@ -32,6 +32,11 @@ import org.springframework.web.context.request.WebRequest;
  */
 public class FlashAttributeArgumentResolver extends BaseAttributeArgumentResolver {
 
+	@Override
+	protected boolean isSupportedAnnotation(Annotation annotation) {
+		return (FlashAttribute.class.isInstance(annotation));
+	}
+	
     protected String getAttribute(Annotation paramAnn) {
         String sessionAttribute = null;
         if (FlashAttribute.class.isInstance(paramAnn)) {
@@ -41,7 +46,7 @@ public class FlashAttributeArgumentResolver extends BaseAttributeArgumentResolve
         return sessionAttribute;
     }
 
-    protected Object getValue(NativeWebRequest webRequest, String attributeName) {
+    protected Object getValue(NativeWebRequest webRequest, String attributeName, Annotation annotation) {
         Object attribute = webRequest.getAttribute(attributeName, WebRequest.SCOPE_SESSION);
         
         if (attribute != null && isArgumentPending(webRequest)) {

@@ -17,6 +17,7 @@ package org.impalaframework.extension.mvc.annotation.resolver;
 import java.lang.annotation.Annotation;
 
 import org.springframework.core.MethodParameter;
+import org.springframework.util.Assert;
 import org.springframework.web.bind.support.WebArgumentResolver;
 import org.springframework.web.bind.support.WebDataBinderFactory;
 import org.springframework.web.context.request.NativeWebRequest;
@@ -29,11 +30,17 @@ import org.springframework.web.method.support.ModelAndViewContainer;
  */
 public abstract class BaseAttributeArgumentResolver implements WebArgumentResolver, HandlerMethodArgumentResolver {
 	
+	/**
+	 * Returns true if annotation can be found.
+	 */
 	@Override
-	public boolean supportsParameter(MethodParameter parameter) {
-		return findAttributeName(parameter) != null;
+	public final boolean supportsParameter(MethodParameter parameter) {
+		return findAnnotation(parameter) != null;
 	}
-	
+
+	/**
+	 * Simply calls {@link WebArgumentResolver#resolveArgument(MethodParameter, NativeWebRequest)}
+	 */
 	@Override
 	public Object resolveArgument(
 			MethodParameter methodParameter, 
@@ -46,29 +53,44 @@ public abstract class BaseAttributeArgumentResolver implements WebArgumentResolv
     public Object resolveArgument(
     		MethodParameter methodParameter,
             NativeWebRequest webRequest) throws Exception {
-        
-        String attributeName = findAttributeName(methodParameter);        
-        Object value = getValue(webRequest, attributeName);
+
+		Annotation annotation = findAnnotation(methodParameter);
+		Assert.state(annotation != null, "Expecting annotation to not be null");
+        String attributeName = getAttribute(annotation);        
+        Object value = getValue(webRequest, attributeName, annotation);
         
         return value;
     }
 
-	private String findAttributeName(MethodParameter methodParameter) {
-		String attributeName = null;
+	/**
+	 * Private method that loops through method parameter annotations, attempting to
+	 * find one that is supported using this argument resolver.
+	 */
+	private Annotation findAnnotation(MethodParameter methodParameter) {
         
         Annotation[] paramAnns = methodParameter.getParameterAnnotations();
         for (Annotation annotation : paramAnns) {
-            attributeName = getAttribute(annotation);
-            if (attributeName != null) {
-                return attributeName;
+            if (isSupportedAnnotation(annotation)) {
+            	return annotation;
             }
         }
         
 		return null;
 	}
+	
+	/**
+	 * Returns true if specified annotation is supported.
+	 */
+	protected abstract boolean isSupportedAnnotation(Annotation annotation);
 
-    protected abstract Object getValue(NativeWebRequest webRequest, String attributeName);
-
+	/**
+	 * Gets attribute from the supported annotation.
+	 */
     protected abstract String getAttribute(Annotation annotation);
+
+    /**
+     * Extract value from request for specified attribute. Annotation can be used for extra checks.
+     */
+    protected abstract Object getValue(NativeWebRequest webRequest, String attributeName, Annotation annotation);
 
 }

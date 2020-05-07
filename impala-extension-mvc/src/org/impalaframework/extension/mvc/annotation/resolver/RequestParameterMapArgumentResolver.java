@@ -35,6 +35,11 @@ import org.springframework.web.context.request.NativeWebRequest;
  */
 public class RequestParameterMapArgumentResolver extends BaseAttributeArgumentResolver {
 
+	@Override
+	protected boolean isSupportedAnnotation(Annotation annotation) {
+		return (RequestParameterMap.class.isInstance(annotation));
+	}
+	
     protected String getAttribute(Annotation paramAnn) {
         if (RequestParameterMap.class.isInstance(paramAnn)) {
             return "found";
@@ -43,7 +48,7 @@ public class RequestParameterMapArgumentResolver extends BaseAttributeArgumentRe
     }
 
     @SuppressWarnings("unchecked")
-    protected Object getValue(NativeWebRequest webRequest, String encoding) {
+    protected Object getValue(NativeWebRequest webRequest, String encoding, Annotation annotation) {
         
         Object nativeRequest = webRequest.getNativeRequest();
         if (nativeRequest instanceof HttpServletRequest) {

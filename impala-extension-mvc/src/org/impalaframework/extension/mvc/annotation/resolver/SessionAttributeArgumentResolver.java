@@ -30,6 +30,11 @@ import org.springframework.web.context.request.WebRequest;
  */
 public class SessionAttributeArgumentResolver extends BaseAttributeArgumentResolver {
 
+	@Override
+	protected boolean isSupportedAnnotation(Annotation annotation) {
+		return (SessionAttribute.class.isInstance(annotation));
+	}
+	
     protected String getAttribute(Annotation paramAnn) {
         String sessionAttribute = null;
         if (SessionAttribute.class.isInstance(paramAnn)) {
@@ -39,7 +44,7 @@ public class SessionAttributeArgumentResolver extends BaseAttributeArgumentResol
         return sessionAttribute;
     }
 
-    protected Object getValue(NativeWebRequest webRequest, String attributeName) {
+    protected Object getValue(NativeWebRequest webRequest, String attributeName, Annotation annotation) {
         Object attribute = webRequest.getAttribute(attributeName, WebRequest.SCOPE_SESSION);
         return attribute;
     }

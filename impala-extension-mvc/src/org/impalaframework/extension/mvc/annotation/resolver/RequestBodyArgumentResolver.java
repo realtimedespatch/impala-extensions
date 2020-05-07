@@ -34,6 +34,11 @@ import org.springframework.web.context.request.NativeWebRequest;
  * @author Phil Zoio
  */
 public class RequestBodyArgumentResolver extends BaseAttributeArgumentResolver {
+	
+	@Override
+	protected boolean isSupportedAnnotation(Annotation annotation) {
+		return (RequestBody.class.isInstance(annotation));
+	}
 
     protected String getAttribute(Annotation paramAnn) {
         if (RequestBody.class.isInstance(paramAnn)) {
@@ -43,7 +48,7 @@ public class RequestBodyArgumentResolver extends BaseAttributeArgumentResolver {
         return null;
     }
 
-    protected Object getValue(NativeWebRequest webRequest, String encoding) {
+    protected Object getValue(NativeWebRequest webRequest, String encoding, Annotation annotation) {
         Object nativeRequest = webRequest.getNativeRequest();
         if (nativeRequest instanceof HttpServletRequest) {
             HttpServletRequest req = (HttpServletRequest) nativeRequest;

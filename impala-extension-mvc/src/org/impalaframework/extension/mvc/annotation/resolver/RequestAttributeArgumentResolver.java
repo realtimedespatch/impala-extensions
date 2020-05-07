@@ -30,6 +30,11 @@ import org.springframework.web.context.request.WebRequest;
  */
 public class RequestAttributeArgumentResolver extends BaseAttributeArgumentResolver {
 
+	@Override
+	protected boolean isSupportedAnnotation(Annotation annotation) {
+		return (RequestAttribute.class.isInstance(annotation));
+	}	
+	
     protected String getAttribute(Annotation paramAnn) {
         String attributeName = null;
         if (RequestAttribute.class.isInstance(paramAnn)) {
@@ -39,7 +44,7 @@ public class RequestAttributeArgumentResolver extends BaseAttributeArgumentResol
         return attributeName;
     }
 
-    protected Object getValue(NativeWebRequest webRequest, String attributeName) {
+    protected Object getValue(NativeWebRequest webRequest, String attributeName, Annotation annotation) {
         Object attribute = webRequest.getAttribute(attributeName, WebRequest.SCOPE_REQUEST);
         return attribute;
     }
