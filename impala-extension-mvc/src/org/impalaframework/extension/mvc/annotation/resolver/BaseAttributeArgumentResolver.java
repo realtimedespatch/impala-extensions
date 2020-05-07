@@ -35,14 +35,16 @@ public abstract class BaseAttributeArgumentResolver implements WebArgumentResolv
 	}
 	
 	@Override
-	public Object resolveArgument(MethodParameter methodParameter, 
+	public Object resolveArgument(
+			MethodParameter methodParameter, 
 			ModelAndViewContainer mavContainer,
 			NativeWebRequest webRequest, 
 			WebDataBinderFactory binderFactory) throws Exception {
 		return resolveArgument(methodParameter, webRequest);
 	}
     
-    public Object resolveArgument(MethodParameter methodParameter,
+    public Object resolveArgument(
+    		MethodParameter methodParameter,
             NativeWebRequest webRequest) throws Exception {
         
         String attributeName = findAttributeName(methodParameter);        
