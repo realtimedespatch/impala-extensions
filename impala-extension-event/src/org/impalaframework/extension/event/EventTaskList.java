@@ -18,7 +18,7 @@ public class EventTaskList implements Runnable {
 
     public EventTaskList(List<EventTask> eventTasks) {
         super();
-        Assert.notNull(eventTasks);
+        Assert.notNull(eventTasks, "eventTasks cannot be null");
         this.eventTasks = eventTasks;
     }
 

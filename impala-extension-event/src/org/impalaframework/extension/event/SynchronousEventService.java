@@ -20,7 +20,7 @@ public class SynchronousEventService implements EventService {
     
     public void submitEvent(Event event) {
         
-        Assert.notNull(eventListenerRegistry);
+        Assert.notNull(eventListenerRegistry, "eventListenerRegistry cannot be null");
         
         EventType eventType = event.getEventType();
         String type = eventType.getType();

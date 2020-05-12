@@ -18,12 +18,12 @@ public class EventTask implements Runnable {
     final private EventListener eventListener;
 
     public EventTask(
-            final Event Event,
+            final Event event,
             final EventListener eventListener) {
         super();
-        Assert.notNull(Event);
-        Assert.notNull(eventListener);
-        this.event = Event;
+        Assert.notNull(event, "event cannot be null");
+        Assert.notNull(eventListener, "event listener cannot be null");
+        this.event = event;
         this.eventListener = eventListener;
     }
 

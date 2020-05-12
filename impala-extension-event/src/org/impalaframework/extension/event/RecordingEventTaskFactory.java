@@ -19,8 +19,8 @@ public class RecordingEventTaskFactory implements EventTaskFactory {
 
     public RecordingEventTaskFactory(PlatformTransactionManager transactionManager, EventDAO eventDAO) {
         super();
-        Assert.notNull(transactionManager);
-        Assert.notNull(eventDAO);
+        Assert.notNull(transactionManager, "transactionManager cannot be null");
+        Assert.notNull(eventDAO, "eventDAO cannot be null");
         this.transactionManager = transactionManager;
         this.eventDAO = eventDAO;
     }

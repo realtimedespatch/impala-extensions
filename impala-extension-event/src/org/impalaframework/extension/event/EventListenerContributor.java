@@ -30,8 +30,8 @@ public class EventListenerContributor implements InitializingBean, DisposableBea
     private Map<String, EventListener> contributedListeners;
 
     public void afterPropertiesSet() throws Exception {
-        Assert.notNull(contributedListeners);
-        Assert.notNull(registry);
+        Assert.notNull(contributedListeners, "contributedListeners cannot be null");
+        Assert.notNull(registry, "registry cannot be null");
         
         Set<String> eventTypes = contributedListeners.keySet();
         for (String eventType : eventTypes) {

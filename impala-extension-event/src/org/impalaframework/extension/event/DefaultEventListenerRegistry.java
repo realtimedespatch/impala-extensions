@@ -26,8 +26,8 @@ public class DefaultEventListenerRegistry implements EventListenerRegistry {
 
     public void addListener(String eventType, EventListener listener) {
 
-        Assert.notNull(eventType);
-        Assert.notNull(listener);
+        Assert.notNull(eventType, "eventType cannot be null");
+        Assert.notNull(listener, "listener cannot be null");
 
         List<EventListener> list = eventListeners.get(eventType);
         if (list == null) {

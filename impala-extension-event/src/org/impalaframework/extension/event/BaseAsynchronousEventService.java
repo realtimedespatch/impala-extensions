@@ -171,11 +171,13 @@ public abstract class BaseAsynchronousEventService implements EventService, Init
                         
                         priorityEventQueue.remove(event);
                         processQueuedEvent(event);
+                        
                     } else {
                         if (debug) {
-                            System.out.println("Not processing event: still waiting as process by date is still in the future " + processedByDate);
+                        	logger.debug("Not processing event: still waiting as process by date is still in the future " + processedByDate);
                         }
                     }
+                    
                 } else {
     
                     if (debug) {
@@ -261,7 +263,7 @@ public abstract class BaseAsynchronousEventService implements EventService, Init
     }
 
     protected EventTask newEventTask(Event event, EventListener eventListener) {
-        Assert.notNull(eventTaskFactory);
+        Assert.notNull(eventTaskFactory, "eventTaskFactory cannot be null");
         EventTask eventTask = eventTaskFactory.newEventTask(event, eventListener);
         return eventTask;
     }

@@ -28,8 +28,8 @@ public class RecordingEventTask extends EventTask {
         
         super(event, eventListener);
         
-        Assert.notNull(eventDAO);
-        Assert.notNull(transactionManager);
+        Assert.notNull(eventDAO, "eventDAO cannot be null");
+        Assert.notNull(transactionManager, "transaction manager cannot be null");
         this.eventDAO = eventDAO;
         this.transactionManager = transactionManager;
     }
