@@ -15,5 +15,6 @@
 	<classpathentry kind="lib" path="/repository/main/spring-aop-4.3.26.RELEASE.jar"/>
 	<classpathentry kind="lib" path="/repository/main/spring-beans-4.3.26.RELEASE.jar"/>
 	<classpathentry kind="lib" path="/repository/main/spring-tx-4.3.26.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/repository/main/log4j-1.2.13.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

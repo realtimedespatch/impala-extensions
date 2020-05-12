@@ -5,6 +5,11 @@ import junit.framework.TestCase;
 import org.joda.time.Period;
 
 public class EventServiceTest extends TestCase {
+	
+	@Override
+	protected void setUp() throws Exception {
+		super.setUp();
+	}
     
     public void testSynchronous() throws InterruptedException {
 
@@ -21,6 +26,30 @@ public class EventServiceTest extends TestCase {
         
         EventTestUtils.checkListeners(listeners);
     }
+    
+    public void testAsyncWithWait() throws Exception {
+    	
+    	AsynchronousEventService service = new AsynchronousEventService();
+        service.setDelayInMilliseconds(0);
+        
+        //check every second
+        service.setPollIntervalInMilliseconds(1000);
+        
+        DefaultEventListenerRegistry registry = new DefaultEventListenerRegistry();
+        service.setEventListenerRegistry(registry);
+        service.setEventTaskFactory(new SimpleEventTaskFactory());
+
+        EventType lowPriority = new EventType("mytype", false, true, false, new Period().withMillis(20000));
+        Event event = new Event(lowPriority, "user", "1", "mytype");
+        TestEventListener[] listeners = EventTestUtils.listeners();
+        
+        EventTestUtils.registerListeners(registry, listeners);
+        service.start();
+
+        service.submitEvent(event);
+        
+        Thread.sleep(30000);
+	}
     
     public void testAsynchronous() throws InterruptedException {
 

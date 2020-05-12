@@ -163,7 +163,11 @@ public abstract class BaseAsynchronousEventService implements EventService, Init
                     }
                     
                     final Date processedByDate = event.getProcessedByDate();
-                    if (processedByDate.getTime() <= System.currentTimeMillis()) {
+                    
+                    long currentTime = System.currentTimeMillis();
+                    long processByTime = processedByDate.getTime();
+                    
+                    if (processByTime <= currentTime) {
     
                         if (debug) {
                             logger.debug("Processing event: " + event);
@@ -173,9 +177,15 @@ public abstract class BaseAsynchronousEventService implements EventService, Init
                         processQueuedEvent(event);
                         
                     } else {
+                    	
+                    	long diff = processByTime - currentTime;
+                    	
                         if (debug) {
-                        	logger.debug("Not processing event: still waiting as process by date is still in the future " + processedByDate);
+                        	logger.debug(String.format("Not processing event: still waiting as process by date '%s' is still %s milliseconds in the future ", processedByDate, diff));
                         }
+                        
+                        //wait just a bit more than diff milliseconds
+                        Thread.sleep(diff+1);
                     }
                     
                 } else {
@@ -221,6 +231,7 @@ public abstract class BaseAsynchronousEventService implements EventService, Init
                     eventTaskList.add(eventTask);
                     
                 } catch (Exception e) {
+                	
                     try {
                         onEventError(event, eventListener, e);
                     } catch (Exception ee) {

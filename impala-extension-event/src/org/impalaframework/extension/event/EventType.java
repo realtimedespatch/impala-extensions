@@ -47,7 +47,6 @@ public class EventType {
         this.handleInProcess = true;
         this.transactional = false;
         this.targetDelay = defaultTargetDelay;
-
     }
 
     public EventType(String type, boolean persist, boolean handleInProcess, boolean transactional, Period targetDelay) {
