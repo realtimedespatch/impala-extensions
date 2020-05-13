@@ -184,21 +184,21 @@ public abstract class BaseAsynchronousEventService implements EventService, Init
                         	logger.debug(String.format("Not processing event: still waiting as process by date '%s' is still %s milliseconds in the future ", processedByDate, diff));
                         }
                         
-                        //wait just a bit more than diff milliseconds
-                        Thread.sleep(diff+1);
+                        //exit the loop. Note that the next invocation of the run method will do the next check for an event
+                        look = false;
                     }
                     
                 } else {
     
                     if (debug) {
-                        logger.debug("No event found on queue");
+                        logger.debug("No event found on queue. Will try again when this method is next called.");
                     }
                     
                     look = false;
                 }
             }
             catch (Exception e) {
-                logger.error("Error processing queued event", e);
+                logger.error("Error processing queued event: " + e.getMessage(), e);
             }
         }
     }
